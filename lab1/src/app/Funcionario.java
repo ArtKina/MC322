@@ -1,8 +1,10 @@
+package app;
+
 public class Funcionario{
     // Atributos da classe
-    private String id;
-    private String nome;
-    private String funcao;
+    String id;
+    String nome;
+    String funcao;
 
     //Construtor
     public Funcionario(String id, String nome, String funcao) {

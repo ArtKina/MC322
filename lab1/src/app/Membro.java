@@ -1,7 +1,9 @@
+package app;
+
 public class Membro {
     // Atributos da classe
-    private String id;
-    private String nome;
+    String id;
+    String nome;
 
     //Construtor
     public Membro(String id, String nome) {
