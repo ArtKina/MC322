@@ -2,12 +2,12 @@ package classes;
 
 public class Emprestimo{
     // Atributos da classe
-	private Livro livroEmprestado;
-	private String dataEmprestimo;
-	private String dataDevolucao;
-	private int diasEmprestado;
-	private int diasAtraso;
-	private Membro emprestador;
+	public Livro livroEmprestado;
+	public String dataEmprestimo;
+	public String dataDevolucao;
+	public int diasEmprestado;
+	public int diasAtraso;
+	public Membro emprestador;
 
     //Construtor
     public Emprestimo(Livro livroEmprestado, String dataEmprestimo, String dataDevolucao, int diasEmprestado, int diasAtraso, Membro emprestador) {
@@ -17,30 +17,5 @@ public class Emprestimo{
         this.diasEmprestado = diasEmprestado;
         this.diasAtraso = diasAtraso;
         this.emprestador = emprestador;
-    }
-    
-    //Getters para acessar os atributos privados
-    public Livro getLivroEmprestado() {
-    	return livroEmprestado;
-    }
-    
-    public String getDataEmprestimo() {
-    	return dataEmprestimo;
-    }
-    
-    public String getDataDevolucao() {
-    	return dataDevolucao;
-    }
-    
-    public int getDiasEmprestado() {
-    	return diasEmprestado;
-    }
-    
-    public int getDiasAtraso() {
-    	return diasAtraso;
-    }
-    
-    public Membro getEmprestador() {
-    	return emprestador;
     }
 }
