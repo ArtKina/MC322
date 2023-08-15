@@ -41,4 +41,9 @@ public class Livro{
     public void setSituacao(String novaSituacao) {
     	situacao = novaSituacao;
     }
+
+     //Método
+    public void determinarEmprestimo(){
+        System.out.println("O livro foi emprestado!");
+    }
 }

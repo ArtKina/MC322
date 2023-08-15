@@ -45,6 +45,9 @@ public class main {
         String tituloEmprestado = EmprestimoA.getLivroEmprestado().getTitulo();
         String dataEmprestimo = EmprestimoA.getDataEmprestimo();
         String dataDevolucao = EmprestimoA.getDataDevolucao();
+
+        //Executando método
+        LivroA.determinarEmprestimo();
         
 
         System.out.format("O membro(a) %s com id %s alugou o livro %s da %d edicao e do autor(a) %s com o ISBN %s, atraves do %s %s, portador do id %s. A data do emprestimo de %s do livro %s foi feito no dia %s e sua data de devolucao sera no dia %s, a situacao dele é %s",
