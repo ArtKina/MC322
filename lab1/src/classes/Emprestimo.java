@@ -43,4 +43,24 @@ public class Emprestimo{
     public Membro getEmprestador() {
     	return emprestador;
     }
+    
+    public void setDataEmprestimo(String novaDataEmprestimo) {
+    	dataEmprestimo = novaDataEmprestimo;
+    }
+    
+    public void setDataDevolucao(String novaDataDevolucao) {
+    	dataDevolucao = novaDataDevolucao;
+    }
+    
+    public void setDiasEmprestado(int novoDiasEmprestado) {
+    	diasEmprestado = novoDiasEmprestado;
+    }
+    
+    public void setDiasAtrasado(int novoDiasAtraso) {
+    	diasAtraso = novoDiasAtraso;
+    }
+    
+    public void setNovoEmprestador(Membro novoEmprestador) {
+    	emprestador = novoEmprestador;
+    }
 }

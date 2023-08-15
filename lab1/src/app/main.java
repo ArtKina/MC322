@@ -8,14 +8,17 @@ import classes.Membro;
 public class main {
     public static void main(String[] args) {
         //Instanciando objeto LivroA
-        Livro LivroA = new Livro("Dom Quixote", 2, "Miguel de Cervantes", "1234");
+        Livro LivroA = new Livro("Dom Quixote", 2, "Miguel de Cervantes", "1234", "disponivel");
         
         //Acessando os atributos do objeto "LivroA" pelos getters:
         String titulo = LivroA.getTitulo();
         int edicao = LivroA.getEdicao();
         String autor = LivroA.getAutor();
         String isbn  = LivroA.getIsbn();
-
+        
+        //Criando set para mudar situacao do LivroA
+        LivroA.setSituacao("indisponivel");
+        String situacao  = LivroA.getSituacao();
         
         //Instanciando objeto MembroA
         Membro MembroA = new Membro("123", "Maria");
@@ -44,7 +47,7 @@ public class main {
         String dataDevolucao = EmprestimoA.getDataDevolucao();
         
 
-        System.out.format("O membro(a) %s com id %s alugou o livro %s da %d edicao e do autor(a) %s com o ISBN %s, atraves do %s %s, portador do id %s. A data do emprestimo de %s do livro %s foi feito no dia %s e sua data de devolucao sera no dia %s",
+        System.out.format("O membro(a) %s com id %s alugou o livro %s da %d edicao e do autor(a) %s com o ISBN %s, atraves do %s %s, portador do id %s. A data do emprestimo de %s do livro %s foi feito no dia %s e sua data de devolucao sera no dia %s, a situacao dele é %s",
                 nome,
                 id,
                 titulo,
@@ -57,6 +60,8 @@ public class main {
                 NomeEmprestador,
                 tituloEmprestado,
                 dataEmprestimo,
-                dataDevolucao);
+                dataDevolucao,
+                situacao
+                );
     }
 }

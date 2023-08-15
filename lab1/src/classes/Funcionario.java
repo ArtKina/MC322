@@ -25,5 +25,9 @@ public class Funcionario{
     public String getFuncao() {
     	return funcao;
     }
+    
+    public void setFuncao(String novaFuncao) {
+    	funcao = novaFuncao;
+    }
 
 }

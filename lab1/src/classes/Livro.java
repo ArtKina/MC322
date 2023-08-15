@@ -6,13 +6,15 @@ public class Livro{
 	private int edicao;
 	private String autor;
 	private String isbn;
+	private String situacao;
 
     //Construtor
-    public Livro(String titulo, int edicao, String autor, String isbn) {
+    public Livro(String titulo, int edicao, String autor, String isbn, String situacao) {
         this.titulo = titulo;
         this.autor = autor;
         this.edicao = edicao;
         this.isbn = isbn;
+        this.situacao = situacao;
     }
 
     //Getters para acessar os atributos privados
@@ -30,5 +32,13 @@ public class Livro{
 
     public String getIsbn() {
     	return isbn;
+    }
+    
+    public String getSituacao() {
+    	return situacao;
+    }
+    
+    public void setSituacao(String novaSituacao) {
+    	situacao = novaSituacao;
     }
 }
