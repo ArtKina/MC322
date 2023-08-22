@@ -2,7 +2,7 @@ package classes;
 
 public class Emprestimo{
     // Atributos da classe
-	private Livro livroEmprestado;
+	private Multimidia itensEmprestados[]
 	private String dataEmprestimo;
 	private String dataDevolucao;
 	private int diasEmprestado;
