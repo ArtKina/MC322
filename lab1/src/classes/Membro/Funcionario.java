@@ -1,4 +1,4 @@
-package classes;
+package classes.Membro;
 
 public class Funcionario{
     // Atributos da classe
