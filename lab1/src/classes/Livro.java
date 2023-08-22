@@ -1,6 +1,6 @@
 package classes;
 
-public class Livro{
+public class Multimidia{
     // Atributos da classe
 	private String titulo;
 	private int edicao;
@@ -9,7 +9,7 @@ public class Livro{
 	private String situacao;
 
     //Construtor
-    public Livro(String titulo, int edicao, String autor, String isbn, String situacao) {
+    public Multimidia(String titulo, int edicao, String autor, String isbn, String situacao) {
         this.titulo = titulo;
         this.autor = autor;
         this.edicao = edicao;
