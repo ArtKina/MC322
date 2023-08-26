@@ -2,8 +2,6 @@ package app;
 
 import classes.Emprestimo;
 import classes.Livro;
-import classes.Membro;
-import classes.Membro.Funcionario;
 
 public class main {
     public static void main(String[] args) {
