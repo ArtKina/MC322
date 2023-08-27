@@ -1,28 +1,29 @@
 package app;
 
-import classes.Livro;
+import classes.emprestimos.*;
+import classes.membros.*;
+import classes.multimidias.*;
 
 public class main {
     public static void main(String[] args) {
         //Instanciando objeto LivroA
-        Livro LivroA = new Livro("Dom Quixote", 2, "Miguel de Cervantes", "1234", "disponivel");
+        Multimidia itemA = new Multimidia("Dom Quixote", "Miguel de Cervantes", "disponivel", "1234");
         
         //Acessando os atributos do objeto "LivroA" pelos getters:
-        String titulo = LivroA.getTitulo();
-        int edicao = LivroA.getEdicao();
-        String autor = LivroA.getAutor();
-        String isbn  = LivroA.getIsbn();
+        String titulo = itemA.getTitulo();
+        String autor = itemA.getAutor();
+        String idItem  = itemA.getId();
         
         //Criando set para mudar situacao do LivroA
-        LivroA.setSituacao("indisponivel");
-        String situacao  = LivroA.getSituacao();
+        itemA.setSituacao("indisponivel");
+        String situacao  = itemA.getSituacao();
         
         //Instanciando objeto MembroA
-        Membro MembroA = new Membro("123", "Maria");
+        Membro MembroA = new Membro("123", "Maria", 5);
         
         //Acessando os atributos do objeto "MembroA" pelos getters:
         String nome = MembroA.getNome();
-        String id = MembroA.getId();
+        String idMembro = MembroA.getId();
         
         
         //Instanciando objeto FuncionarioA
@@ -35,25 +36,28 @@ public class main {
         
         
         //Instanciando o objeto EmprestimoA
-        Emprestimo EmprestimoA = new Emprestimo(LivroA, "12/08/2023", "20/08/2023", 0, 0, MembroA);
+        Emprestimo EmprestimoA = new Emprestimo("12/08/2023", "20/08/2023", 0, 0, MembroA);
         
         //Acessando os atributos do objeto "EmprestimoA" pelos getters:
         String NomeEmprestador = EmprestimoA.getEmprestador().getNome();
-        String tituloEmprestado = EmprestimoA.getLivroEmprestado().getTitulo();
+        Multimidia[] itensEmprestados = EmprestimoA.getitensEmprestados();
+        int nItens = EmprestimoA.getNumItens();
         String dataEmprestimo = EmprestimoA.getDataEmprestimo();
         String dataDevolucao = EmprestimoA.getDataDevolucao();
 
         //Executando método
-        LivroA.determinarEmprestimo();
+        itemA.determinarEmprestimo();
         
-
-        System.out.format("O membro(a) %s com id %s alugou o livro %s da %d edicao e do autor(a) %s com o ISBN %s, atraves do %s %s, portador do id %s. A data do emprestimo de %s do livro %s foi feito no dia %s e sua data de devolucao sera no dia %s, a situacao dele é %s",
+        EmprestimoA.addItemEmprestado(itemA);
+        
+        String tituloEmprestado = itensEmprestados[0].getTitulo();
+        
+        System.out.format("O membro(a) %s com id %s alugou o livro %s do autor(a) %s com o id %s, atraves do %s %s, portador do id %s. A data do emprestimo de %s do livro %s foi feito no dia %s e sua data de devolucao sera no dia %s, a situacao dele é %s",
                 nome,
-                id,
+                idMembro,
                 titulo,
-                edicao,
                 autor,
-                isbn,
+                idItem,
                 funcao,
                 nomef,
                 idf,

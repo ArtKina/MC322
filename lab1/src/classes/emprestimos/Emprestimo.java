@@ -1,5 +1,8 @@
 package classes.emprestimos;
 
+import classes.membros.Membro;
+import classes.multimidias.Multimidia;
+
 public class Emprestimo {
     // Atributos da classe
     private Multimidia[] itensEmprestados;
@@ -8,10 +11,11 @@ public class Emprestimo {
     private int diasEmprestado;
     private int diasAtraso;
     private Membro emprestador;
+    private int numItens;
 
     //Construtor
-    public Emprestimo(Livro livroEmprestado, String dataEmprestimo, String dataDevolucao, int diasEmprestado, int diasAtraso, Membro emprestador) {
-        this.livroEmprestado = livroEmprestado;
+    public Emprestimo(String dataEmprestimo, String dataDevolucao, int diasEmprestado, int diasAtraso, Membro emprestador) {
+    	itensEmprestados = new Multimidia[1];
         this.dataEmprestimo = dataEmprestimo;
         this.dataDevolucao = dataDevolucao;
         this.diasEmprestado = diasEmprestado;
@@ -19,9 +23,9 @@ public class Emprestimo {
         this.emprestador = emprestador;
     }
 
-    //Getters para acessar os atributos privados
-    public Livro getLivroEmprestado() {
-        return livroEmprestado;
+    //Getters e setters para acessar os atributos privados
+    public Multimidia[] getitensEmprestados() {
+    	return itensEmprestados;
     }
 
     public String getDataEmprestimo() {
@@ -43,6 +47,10 @@ public class Emprestimo {
     public Membro getEmprestador() {
         return emprestador;
     }
+    
+    public int getNumItens() {
+    	return numItens;
+    }
 
     public void setDataEmprestimo(String novaDataEmprestimo) {
         dataEmprestimo = novaDataEmprestimo;
@@ -62,5 +70,11 @@ public class Emprestimo {
 
     public void setNovoEmprestador(Membro novoEmprestador) {
         emprestador = novoEmprestador;
+    }
+    
+    //Métodos
+    public void addItemEmprestado(Multimidia item) {
+		itensEmprestados[numItens] = item;
+		numItens++;
     }
 }

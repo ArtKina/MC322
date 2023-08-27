@@ -5,7 +5,7 @@ import classes.emprestimos.Emprestimo;
 public class Membro {
     private String id;
     private String nome;
-    private Emprestimo[] emprestimos;
+    private Emprestimo[] emprestimos;//relação de associacao entre membro e emprestimo
     private int numEmprestimos;
     
     //Construtor

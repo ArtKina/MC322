@@ -4,12 +4,14 @@ public class Multimidia {
 	private String titulo;
 	private String autor;
 	private String situacao;
+	private String id;
 	
 	//Construtor
-	public Multimidia(String titulo, String autor, String situacao) {
+	public Multimidia(String titulo, String autor, String situacao, String id) {
 		this.titulo = titulo;
 		this.autor = autor;
 		this.situacao = situacao;
+		this.id = id;
 	}
 	
     //Getters e Setters para acessar os atributos privados
@@ -19,6 +21,10 @@ public class Multimidia {
     
     public String getAutor() {
         return autor;
+    }
+    
+    public String getId() {
+    	return id;
     }
     
     public String getSituacao() {
