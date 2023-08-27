@@ -1,8 +1,8 @@
-package classes.Emprestimo;
+package classes.emprestimos;
 
 public class Emprestimo {
     // Atributos da classe
-    private Multimidia itensEmprestados[];
+    private Multimidia[] itensEmprestados;
     private String dataEmprestimo;
     private String dataDevolucao;
     private int diasEmprestado;

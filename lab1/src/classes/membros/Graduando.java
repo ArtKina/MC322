@@ -1,4 +1,4 @@
-package classes.Membro;
+package classes.membros;
 
 public class Graduando {
     // Atributos da classe

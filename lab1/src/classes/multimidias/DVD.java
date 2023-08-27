@@ -1,10 +1,11 @@
-package classes.Multimidia;
+package classes.multimidias;
 
 public class DVD {
     // Atributos da classe
     private String id;
     private String titulo;
     private String autor;
+    private String Situacao;
 
     //Construtor
     public DVD(String id, String titulo, String autor) {

@@ -1,4 +1,4 @@
-package classes.Multimidia;
+package classes.multimidias;
 
 public class LivroFisico {
     // Atributos da classe

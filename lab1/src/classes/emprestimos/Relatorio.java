@@ -1,4 +1,4 @@
-package classes.Emprestimo;
+package classes.emprestimos;
 
 public class Relatorio {
 }
