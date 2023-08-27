@@ -1,13 +1,13 @@
-package classes;
+package classes.Emprestimo;
 
-public class Emprestimo{
+public class Emprestimo {
     // Atributos da classe
-	private Multimidia itensEmprestados[]
-	private String dataEmprestimo;
-	private String dataDevolucao;
-	private int diasEmprestado;
-	private int diasAtraso;
-	private Membro emprestador;
+    private Multimidia itensEmprestados[];
+    private String dataEmprestimo;
+    private String dataDevolucao;
+    private int diasEmprestado;
+    private int diasAtraso;
+    private Membro emprestador;
 
     //Construtor
     public Emprestimo(Livro livroEmprestado, String dataEmprestimo, String dataDevolucao, int diasEmprestado, int diasAtraso, Membro emprestador) {
@@ -21,46 +21,46 @@ public class Emprestimo{
 
     //Getters para acessar os atributos privados
     public Livro getLivroEmprestado() {
-    	return livroEmprestado;
+        return livroEmprestado;
     }
 
     public String getDataEmprestimo() {
-    	return dataEmprestimo;
+        return dataEmprestimo;
     }
 
     public String getDataDevolucao() {
-    	return dataDevolucao;
+        return dataDevolucao;
     }
 
     public int getDiasEmprestado() {
-    	return diasEmprestado;
+        return diasEmprestado;
     }
 
     public int getDiasAtraso() {
-    	return diasAtraso;
+        return diasAtraso;
     }
 
     public Membro getEmprestador() {
-    	return emprestador;
+        return emprestador;
     }
-    
+
     public void setDataEmprestimo(String novaDataEmprestimo) {
-    	dataEmprestimo = novaDataEmprestimo;
+        dataEmprestimo = novaDataEmprestimo;
     }
-    
+
     public void setDataDevolucao(String novaDataDevolucao) {
-    	dataDevolucao = novaDataDevolucao;
+        dataDevolucao = novaDataDevolucao;
     }
-    
+
     public void setDiasEmprestado(int novoDiasEmprestado) {
-    	diasEmprestado = novoDiasEmprestado;
+        diasEmprestado = novoDiasEmprestado;
     }
-    
+
     public void setDiasAtrasado(int novoDiasAtraso) {
-    	diasAtraso = novoDiasAtraso;
+        diasAtraso = novoDiasAtraso;
     }
-    
+
     public void setNovoEmprestador(Membro novoEmprestador) {
-    	emprestador = novoEmprestador;
+        emprestador = novoEmprestador;
     }
 }
