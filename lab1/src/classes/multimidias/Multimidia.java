@@ -5,6 +5,10 @@ public class Multimidia {
 	private String autor;
 	private String situacao;
 	private String id;
+	private CD[] cds; //Agregação com a classe CD
+	private DVD[] dvds; //Agregação com a classe DVD
+	private LivroEletronico[] livrosEletronicos; //Agregação com a classe LivroEletronico
+	private LivroFisico[] livrosFisicos; //Agregação com a classe LivroFisico
 	
 	//Construtor
 	public Multimidia(String titulo, String autor, String situacao, String id) {
