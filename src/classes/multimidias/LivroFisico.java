@@ -2,11 +2,12 @@ package classes.multimidias;
 
 public class LivroFisico {
     // Atributos da classe
-    private String titulo;
-    private int edicao;
-    private String autor;
     private String isbn;
-    private String situacao;
+    private int edicao;
+    private int numeroCopias;
+    private int nCopiasDisponiveis;
+    private String localizacao;
+    private String estadoConservacao;
 
     //Construtor
     public LivroFisico(String titulo, int edicao, String autor, String isbn, String situacao) {

@@ -2,11 +2,11 @@ package classes.multimidias;
 
 public class LivroEletronico {
     // Atributos da classe
-    private String titulo;
-    private int edicao;
-    private String autor;
-    private String isbn;
-    private String situacao;
+    private String formato;
+    private int numeroLicencas;
+    private String url;
+    private String requisitos;
+    private String dataDisponibilidade;
 
     //Construtor
     public LivroEletronico(String titulo, int edicao, String autor, String isbn, String situacao) {
