@@ -1,8 +1,8 @@
 package classes.multimidias;
 
-public class DVD {
+public class DVD extends Multimidia{
     // Atributos da classe
-    private String listaFaixas;
+    private String[] listaFaixas;
     private int duracaoTotal;
     private int numeroCopias;
     private int nCopiasDisponiveis

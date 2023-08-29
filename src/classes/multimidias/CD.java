@@ -1,11 +1,12 @@
 package classes.multimidias;
 
-public class CD {
+public class CD extends Multimidia{
     // Atributos da classe
-    private String id;
-    private String titulo;
-    private String autor;
-    private String situacao;
+    private String[] listaFaixas; 
+    private int duracaoTotal;
+    private int nCopias;
+    private int nCopiasDisponiveis;
+    private String estadoConservacao;
 
     //Construtor
     public CD(String id, String titulo, String autor) {

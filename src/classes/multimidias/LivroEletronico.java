@@ -1,6 +1,6 @@
 package classes.multimidias;
 
-public class LivroEletronico {
+public class LivroEletronico extends Multimidia{
     // Atributos da classe
     private String formato;
     private int numeroLicencas;

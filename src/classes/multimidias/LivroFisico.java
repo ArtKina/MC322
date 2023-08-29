@@ -1,12 +1,12 @@
 package classes.multimidias;
 
-public class LivroFisico {
+public class LivroFisico extends Multimidia{
     // Atributos da classe
     private String isbn;
     private int edicao;
     private int numeroCopias;
     private int nCopiasDisponiveis;
-    private String localizacao;
+    private String[] localizacao;
     private String estadoConservacao;
 
     //Construtor
