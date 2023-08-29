@@ -3,6 +3,7 @@ package classes.multimidias;
 public class Multimidia {
 	private String titulo;
 	private String autor;
+	private String editora;
 	private String situacao;
 	private String id;
 	private CD[] cds; //Agregação com a classe CD
