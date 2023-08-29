@@ -7,7 +7,6 @@ public class LivroFisico {
     private String autor;
     private String isbn;
     private String situacao;
-    private String numCopias;
 
     //Construtor
     public LivroFisico(String titulo, int edicao, String autor, String isbn, String situacao) {

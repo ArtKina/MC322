@@ -1068,3 +1068,134 @@ Java Model Exception: Error in Java Model (code 1006): out/production/lab1/class
 !MESSAGE Save operation warnings.
 !SUBENTRY 1 org.eclipse.core.resources 2 234 2023-08-28 21:49:39.454
 !MESSAGE The project description file (.project) for 'lab1' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+
+!ENTRY org.eclipse.egit.ui 4 0 2023-08-28 22:35:35.651
+!MESSAGE Cannot lock /home/ec2021-ceb/ra231529/Documents/MC322/MC322/.git/index. Ensure that no other process has an open file handle on the lock file /home/ec2021-ceb/ra231529/Documents/MC322/MC322/.git/index.lock, then you may delete the lock file and retry.
+!STACK 0
+org.eclipse.jgit.errors.LockFailedException: Cannot lock /home/ec2021-ceb/ra231529/Documents/MC322/MC322/.git/index. Ensure that no other process has an open file handle on the lock file /home/ec2021-ceb/ra231529/Documents/MC322/MC322/.git/index.lock, then you may delete the lock file and retry.
+	at org.eclipse.jgit.dircache.DirCache.lock(DirCache.java:221)
+	at org.eclipse.jgit.dircache.DirCache.lock(DirCache.java:292)
+	at org.eclipse.jgit.dircache.DirCache.lock(DirCache.java:258)
+	at org.eclipse.jgit.lib.Repository.lockDirCache(Repository.java:1285)
+	at org.eclipse.egit.core.RepositoryHandle.lockDirCache(RepositoryHandle.java:319)
+	at org.eclipse.jgit.api.AddCommand.call(AddCommand.java:122)
+	at org.eclipse.egit.ui.internal.staging.StagingView$58.run(StagingView.java:3872)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2023-08-28 22:36:11.002
+!MESSAGE Cannot lock /home/ec2021-ceb/ra231529/Documents/MC322/MC322/.git/index. Ensure that no other process has an open file handle on the lock file /home/ec2021-ceb/ra231529/Documents/MC322/MC322/.git/index.lock, then you may delete the lock file and retry.
+!STACK 0
+org.eclipse.jgit.errors.LockFailedException: Cannot lock /home/ec2021-ceb/ra231529/Documents/MC322/MC322/.git/index. Ensure that no other process has an open file handle on the lock file /home/ec2021-ceb/ra231529/Documents/MC322/MC322/.git/index.lock, then you may delete the lock file and retry.
+	at org.eclipse.jgit.dircache.DirCache.lock(DirCache.java:221)
+	at org.eclipse.jgit.dircache.DirCache.lock(DirCache.java:292)
+	at org.eclipse.jgit.dircache.DirCache.lock(DirCache.java:258)
+	at org.eclipse.jgit.lib.Repository.lockDirCache(Repository.java:1285)
+	at org.eclipse.egit.core.RepositoryHandle.lockDirCache(RepositoryHandle.java:319)
+	at org.eclipse.jgit.api.AddCommand.call(AddCommand.java:122)
+	at org.eclipse.egit.ui.internal.staging.StagingView$58.run(StagingView.java:3872)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.core 4 0 2023-08-28 22:37:14.885
+!MESSAGE Failed to untrack resource.
+!STACK 0
+org.eclipse.jgit.errors.LockFailedException: Cannot lock /home/ec2021-ceb/ra231529/Documents/MC322/MC322/.git/index. Ensure that no other process has an open file handle on the lock file /home/ec2021-ceb/ra231529/Documents/MC322/MC322/.git/index.lock, then you may delete the lock file and retry.
+	at org.eclipse.jgit.dircache.DirCache.lock(DirCache.java:221)
+	at org.eclipse.jgit.dircache.DirCache.lock(DirCache.java:292)
+	at org.eclipse.jgit.dircache.DirCache.lock(DirCache.java:258)
+	at org.eclipse.jgit.lib.Repository.lockDirCache(Repository.java:1285)
+	at org.eclipse.egit.core.RepositoryHandle.lockDirCache(RepositoryHandle.java:319)
+	at org.eclipse.egit.core.op.AssumeUnchangedOperation.assumeValid(AssumeUnchangedOperation.java:159)
+	at org.eclipse.egit.core.op.AssumeUnchangedOperation.execute(AssumeUnchangedOperation.java:108)
+	at org.eclipse.egit.core.internal.job.JobUtil$1.run(JobUtil.java:55)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2023-08-28 22:37:24.722
+!MESSAGE Cannot lock /home/ec2021-ceb/ra231529/Documents/MC322/MC322/.git/index. Ensure that no other process has an open file handle on the lock file /home/ec2021-ceb/ra231529/Documents/MC322/MC322/.git/index.lock, then you may delete the lock file and retry.
+!STACK 0
+org.eclipse.jgit.errors.LockFailedException: Cannot lock /home/ec2021-ceb/ra231529/Documents/MC322/MC322/.git/index. Ensure that no other process has an open file handle on the lock file /home/ec2021-ceb/ra231529/Documents/MC322/MC322/.git/index.lock, then you may delete the lock file and retry.
+	at org.eclipse.jgit.dircache.DirCache.lock(DirCache.java:221)
+	at org.eclipse.jgit.dircache.DirCache.lock(DirCache.java:292)
+	at org.eclipse.jgit.dircache.DirCache.lock(DirCache.java:258)
+	at org.eclipse.jgit.lib.Repository.lockDirCache(Repository.java:1285)
+	at org.eclipse.egit.core.RepositoryHandle.lockDirCache(RepositoryHandle.java:319)
+	at org.eclipse.jgit.api.AddCommand.call(AddCommand.java:122)
+	at org.eclipse.egit.ui.internal.staging.StagingView$58.run(StagingView.java:3872)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2023-08-28 22:37:57.674
+!MESSAGE Cannot lock /home/ec2021-ceb/ra231529/Documents/MC322/MC322/.git/index. Ensure that no other process has an open file handle on the lock file /home/ec2021-ceb/ra231529/Documents/MC322/MC322/.git/index.lock, then you may delete the lock file and retry.
+!STACK 0
+org.eclipse.jgit.errors.LockFailedException: Cannot lock /home/ec2021-ceb/ra231529/Documents/MC322/MC322/.git/index. Ensure that no other process has an open file handle on the lock file /home/ec2021-ceb/ra231529/Documents/MC322/MC322/.git/index.lock, then you may delete the lock file and retry.
+	at org.eclipse.jgit.dircache.DirCache.lock(DirCache.java:221)
+	at org.eclipse.jgit.dircache.DirCache.lock(DirCache.java:292)
+	at org.eclipse.jgit.dircache.DirCache.lock(DirCache.java:258)
+	at org.eclipse.jgit.lib.Repository.lockDirCache(Repository.java:1285)
+	at org.eclipse.egit.core.RepositoryHandle.lockDirCache(RepositoryHandle.java:319)
+	at org.eclipse.jgit.api.AddCommand.call(AddCommand.java:122)
+	at org.eclipse.egit.ui.internal.staging.StagingView$58.run(StagingView.java:3872)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2023-08-28 22:42:39.371
+!MESSAGE Cannot lock /home/ec2021-ceb/ra231529/Documents/MC322/MC322/.git/index. Ensure that no other process has an open file handle on the lock file /home/ec2021-ceb/ra231529/Documents/MC322/MC322/.git/index.lock, then you may delete the lock file and retry.
+!STACK 0
+org.eclipse.jgit.errors.LockFailedException: Cannot lock /home/ec2021-ceb/ra231529/Documents/MC322/MC322/.git/index. Ensure that no other process has an open file handle on the lock file /home/ec2021-ceb/ra231529/Documents/MC322/MC322/.git/index.lock, then you may delete the lock file and retry.
+	at org.eclipse.jgit.dircache.DirCache.lock(DirCache.java:221)
+	at org.eclipse.jgit.dircache.DirCache.lock(DirCache.java:292)
+	at org.eclipse.jgit.dircache.DirCache.lock(DirCache.java:258)
+	at org.eclipse.jgit.lib.Repository.lockDirCache(Repository.java:1285)
+	at org.eclipse.egit.core.RepositoryHandle.lockDirCache(RepositoryHandle.java:319)
+	at org.eclipse.jgit.api.AddCommand.call(AddCommand.java:122)
+	at org.eclipse.egit.ui.internal.staging.StagingView$58.run(StagingView.java:3872)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2023-08-28 22:43:57.797
+!MESSAGE Cannot lock /home/ec2021-ceb/ra231529/Documents/MC322/MC322/.git/index. Ensure that no other process has an open file handle on the lock file /home/ec2021-ceb/ra231529/Documents/MC322/MC322/.git/index.lock, then you may delete the lock file and retry.
+!STACK 0
+org.eclipse.jgit.errors.LockFailedException: Cannot lock /home/ec2021-ceb/ra231529/Documents/MC322/MC322/.git/index. Ensure that no other process has an open file handle on the lock file /home/ec2021-ceb/ra231529/Documents/MC322/MC322/.git/index.lock, then you may delete the lock file and retry.
+	at org.eclipse.jgit.dircache.DirCache.lock(DirCache.java:221)
+	at org.eclipse.jgit.dircache.DirCache.lock(DirCache.java:292)
+	at org.eclipse.jgit.dircache.DirCache.lock(DirCache.java:258)
+	at org.eclipse.jgit.lib.Repository.lockDirCache(Repository.java:1285)
+	at org.eclipse.egit.core.RepositoryHandle.lockDirCache(RepositoryHandle.java:319)
+	at org.eclipse.jgit.api.AddCommand.call(AddCommand.java:122)
+	at org.eclipse.egit.ui.internal.staging.StagingView$58.run(StagingView.java:3872)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2023-08-28 22:44:21.357
+!MESSAGE Cannot lock /home/ec2021-ceb/ra231529/Documents/MC322/MC322/.git/index. Ensure that no other process has an open file handle on the lock file /home/ec2021-ceb/ra231529/Documents/MC322/MC322/.git/index.lock, then you may delete the lock file and retry.
+!STACK 0
+org.eclipse.jgit.errors.LockFailedException: Cannot lock /home/ec2021-ceb/ra231529/Documents/MC322/MC322/.git/index. Ensure that no other process has an open file handle on the lock file /home/ec2021-ceb/ra231529/Documents/MC322/MC322/.git/index.lock, then you may delete the lock file and retry.
+	at org.eclipse.jgit.dircache.DirCache.lock(DirCache.java:221)
+	at org.eclipse.jgit.dircache.DirCache.lock(DirCache.java:292)
+	at org.eclipse.jgit.dircache.DirCache.lock(DirCache.java:258)
+	at org.eclipse.jgit.lib.Repository.lockDirCache(Repository.java:1285)
+	at org.eclipse.egit.core.RepositoryHandle.lockDirCache(RepositoryHandle.java:319)
+	at org.eclipse.jgit.api.AddCommand.call(AddCommand.java:122)
+	at org.eclipse.egit.ui.internal.staging.StagingView$58.run(StagingView.java:3872)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2023-08-28 22:45:38.802
+!MESSAGE Cannot lock /home/ec2021-ceb/ra231529/Documents/MC322/MC322/.git/index. Ensure that no other process has an open file handle on the lock file /home/ec2021-ceb/ra231529/Documents/MC322/MC322/.git/index.lock, then you may delete the lock file and retry.
+!STACK 0
+org.eclipse.jgit.errors.LockFailedException: Cannot lock /home/ec2021-ceb/ra231529/Documents/MC322/MC322/.git/index. Ensure that no other process has an open file handle on the lock file /home/ec2021-ceb/ra231529/Documents/MC322/MC322/.git/index.lock, then you may delete the lock file and retry.
+	at org.eclipse.jgit.dircache.DirCache.lock(DirCache.java:221)
+	at org.eclipse.jgit.dircache.DirCache.lock(DirCache.java:292)
+	at org.eclipse.jgit.dircache.DirCache.lock(DirCache.java:258)
+	at org.eclipse.jgit.lib.Repository.lockDirCache(Repository.java:1285)
+	at org.eclipse.egit.core.RepositoryHandle.lockDirCache(RepositoryHandle.java:319)
+	at org.eclipse.jgit.api.AddCommand.call(AddCommand.java:122)
+	at org.eclipse.egit.ui.internal.staging.StagingView$58.run(StagingView.java:3872)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2023-08-28 22:46:07.878
+!MESSAGE Cannot lock /home/ec2021-ceb/ra231529/Documents/MC322/MC322/.git/index. Ensure that no other process has an open file handle on the lock file /home/ec2021-ceb/ra231529/Documents/MC322/MC322/.git/index.lock, then you may delete the lock file and retry.
+!STACK 0
+org.eclipse.jgit.errors.LockFailedException: Cannot lock /home/ec2021-ceb/ra231529/Documents/MC322/MC322/.git/index. Ensure that no other process has an open file handle on the lock file /home/ec2021-ceb/ra231529/Documents/MC322/MC322/.git/index.lock, then you may delete the lock file and retry.
+	at org.eclipse.jgit.dircache.DirCache.lock(DirCache.java:221)
+	at org.eclipse.jgit.dircache.DirCache.lock(DirCache.java:292)
+	at org.eclipse.jgit.dircache.DirCache.lock(DirCache.java:258)
+	at org.eclipse.jgit.lib.Repository.lockDirCache(Repository.java:1285)
+	at org.eclipse.egit.core.RepositoryHandle.lockDirCache(RepositoryHandle.java:319)
+	at org.eclipse.jgit.api.AddCommand.call(AddCommand.java:122)
+	at org.eclipse.egit.ui.internal.staging.StagingView$58.run(StagingView.java:3872)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
