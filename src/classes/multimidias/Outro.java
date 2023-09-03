@@ -8,7 +8,14 @@ public class Outro extends Multimidia{
 	private String[] localizacao;
 	private String estadoConservacao;
 	
-	public Outro() {
+	public Outro(String titulo, String autor, String editora, int anoPublicacao, String genero, String sinopse, String imagem, String tipo, String formato, int nCopias, int nCopiasDisponiveis, String [] localizacao, String estadoConservacao) {
+		super(titulo, autor, editora, anoPublicacao, genero, sinopse, imagem);
+		this.tipo = tipo;
+		this.formato = formato;
+		this.nCopias = nCopias;
+		this.nCopiasDisponiveis = nCopiasDisponiveis;
+		this.localizacao = localizacao;
+		this.estadoConservacao = estadoConservacao;
 		
 	}
 }

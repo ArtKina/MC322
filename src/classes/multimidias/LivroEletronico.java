@@ -3,44 +3,22 @@ package classes.multimidias;
 public class LivroEletronico extends Multimidia{
     // Atributos da classe
     private String formato;
-    private int numeroLicencas;
+    private int nLicencas;
     private String url;
     private String requisitos;
     private String dataDisponibilidade;
 
     //Construtor
-    public LivroEletronico(String titulo, int edicao, String autor, String isbn, String situacao) {
-        this.titulo = titulo;
-        this.autor = autor;
-        this.edicao = edicao;
-        this.isbn = isbn;
-        this.situacao = situacao;
+    public LivroEletronico(String titulo, String autor, String editora, int anoPublicacao, String genero, String sinopse, String imagem, String formato, int nLicencas,String url, String requisitos, String dataDisponibilidade) {
+        super(titulo, autor, editora, anoPublicacao, genero, sinopse, imagem);
+        this.formato = formato;
+        this.nLicencas = nLicencas;
+        this.url = url;
+        this.requisitos = requisitos;
+        this.dataDisponibilidade = dataDisponibilidade;
     }
 
     //Getters para acessar os atributos privados
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public int getEdicao() {
-        return edicao;
-    }
-
-    public String getAutor() {
-        return autor;
-    }
-
-    public String getIsbn() {
-        return isbn;
-    }
-
-    public String getSituacao() {
-        return situacao;
-    }
-
-    public void setSituacao(String novaSituacao) {
-        situacao = novaSituacao;
-    }
 
     //Método
     public void determinarEmprestimo(){

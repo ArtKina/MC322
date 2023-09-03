@@ -4,33 +4,22 @@ public class DVD extends Multimidia{
     // Atributos da classe
     private String[] listaFaixas;
     private int duracaoTotal;
-    private int numeroCopias;
-    private int nCopiasDisponiveis
+    private int nCopias;
+    private int nCopiasDisponiveis;
     private String legendas;
     private String audio;
     private String estadoConservacao;
 
     //Construtor
-    public DVD(String id, String titulo, String autor) {
-        this.id = id;
-        this.titulo = titulo;
-        this.autor = autor;
+    public DVD(String titulo, String autor, String editora, int anoPublicacao, String genero, String sinopse, String imagem, String[] listaFaixas, int durcaoTotal, int nCopias, int nCopiasDisponiveis, String audio, String legendas, String estadoConservacao) {
+        super(titulo, autor, editora, anoPublicacao, genero, sinopse, imagem);
+        this.listaFaixas = listaFaixas;
+        this.duracaoTotal = durcaoTotal;
+        this.nCopias = nCopias;
+        this.nCopiasDisponiveis = nCopiasDisponiveis;
+        this.legendas = legendas;
+        this.audio = audio;
+        this.estadoConservacao = estadoConservacao;
     }
 
-    //Getters para acessar os atributos privados
-    public String getId() {
-        return id;
-    }
-
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public String getAutor() {
-        return autor;
-    }
-
-    public void setFuncao(String novaFuncao) {
-        autor = novaFuncao;
-    }
 }
