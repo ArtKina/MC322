@@ -1,47 +1,36 @@
 package classes.multimidias;
 
-public class LivroFisico extends Multimidia{
+class LivroFisico extends Multimidia{
     // Atributos da classe
     private String isbn;
     private int edicao;
-    private int numeroCopias;
+    private int nCopias;
     private int nCopiasDisponiveis;
     private String[] localizacao;
     private String estadoConservacao;
 
     //Construtor
-    public LivroFisico(String titulo, int edicao, String autor, String isbn, String situacao) {
-        this.titulo = titulo;
-        this.autor = autor;
-        this.edicao = edicao;
+    public LivroFisico(String isbn, int edicao, int nCopias, int nCopiasDisponiveis, String[] localizacao, String estadoConservacao) {
+        super(titulo, autor, editora, anoPublicacao, genero, sinopse, imagem);
         this.isbn = isbn;
-        this.situacao = situacao;
+        this.edicao = edicao;
+        this.nCopias = nCopias;
+        this.nCopiasDisponiveis = nCopiasDisponiveis;
+        this.localizacao = localizacao;
+        this.estadoConservacao = estadoConservacao;
     }
 
     //Getters para acessar os atributos privados
-    public String getTitulo() {
-        return titulo;
-    }
-
     public int getEdicao() {
         return edicao;
     }
 
-    public String getAutor() {
-        return autor;
-    }
 
     public String getIsbn() {
         return isbn;
     }
 
-    public String getSituacao() {
-        return situacao;
-    }
 
-    public void setSituacao(String novaSituacao) {
-        situacao = novaSituacao;
-    }
 
     //Método
     public void determinarEmprestimo(){

@@ -1,6 +1,6 @@
 package classes.multimidias;
 
-public class Multimidia {
+abstract class Multimidia {
 	private String titulo;
 	private String autor;
 	private String editora;
@@ -10,11 +10,14 @@ public class Multimidia {
 	private String imagem;
 	
 	//Construtor
-	public Multimidia(String titulo, String autor, String situacao, String id) {
+	public Multimidia(String titulo, String autor, String editora, String anoPublicacao, String genero, String sinopse, String imagem) {
 		this.titulo = titulo;
 		this.autor = autor;
-		this.situacao = situacao;
-		this.id = id;
+		this.editora = editora;
+		this.anoPublicacao = anoPublicacao; 
+		this.genero = genero;
+		this.sinopse = sinopse;
+		this.imagem = imagem;
 	}
 	
     //Getters e Setters para acessar os atributos privados
@@ -24,18 +27,6 @@ public class Multimidia {
     
     public String getAutor() {
         return autor;
-    }
-    
-    public String getId() {
-    	return id;
-    }
-    
-    public String getSituacao() {
-        return situacao;
-    }
-
-    public void setSituacao(String novaSituacao) {
-        situacao = novaSituacao;
     }
     
     //Método
