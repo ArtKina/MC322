@@ -9,6 +9,7 @@ public class LivroFisico extends Multimidia{
     private String localizacao;
     private String estadoConservacao;
 
+
     //Construtor
     public LivroFisico(String titulo, String autor, String editora, int anoPublicacao, String genero, String sinopse, String imagem, String isbn, int edicao, int nCopias, int nCopiasDisponiveis, String localizacao, String estadoConservacao) {
         super(titulo, autor, editora, anoPublicacao, genero, sinopse, imagem);
