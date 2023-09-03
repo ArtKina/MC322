@@ -1,6 +1,6 @@
 package classes.multimidias;
 
-abstract class Multimidia {
+public class Multimidia {
 	private String titulo;
 	private String autor;
 	private String editora;
