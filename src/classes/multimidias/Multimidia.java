@@ -4,19 +4,20 @@ public class Multimidia {
 	private String titulo;
 	private String autor;
 	private String editora;
-	private String situacao;
-	private String id;
-	private CD[] cds; //Agregação com a classe CD
-	private DVD[] dvds; //Agregação com a classe DVD
-	private LivroEletronico[] livrosEletronicos; //Agregação com a classe LivroEletronico
-	private LivroFisico[] livrosFisicos; //Agregação com a classe LivroFisico
+	private int anoPublicacao;
+	private String genero;
+	private String sinopse;
+	private String imagem;
 	
 	//Construtor
-	public Multimidia(String titulo, String autor, String situacao, String id) {
+	public Multimidia(String titulo, String autor, String editora, int anoPublicacao, String genero, String sinopse, String imagem) {
 		this.titulo = titulo;
 		this.autor = autor;
-		this.situacao = situacao;
-		this.id = id;
+		this.editora = editora;
+		this.anoPublicacao = anoPublicacao; 
+		this.genero = genero;
+		this.sinopse = sinopse;
+		this.imagem = imagem;
 	}
 	
     //Getters e Setters para acessar os atributos privados
@@ -26,18 +27,6 @@ public class Multimidia {
     
     public String getAutor() {
         return autor;
-    }
-    
-    public String getId() {
-    	return id;
-    }
-    
-    public String getSituacao() {
-        return situacao;
-    }
-
-    public void setSituacao(String novaSituacao) {
-        situacao = novaSituacao;
     }
     
     //Método
