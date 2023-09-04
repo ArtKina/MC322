@@ -1,33 +1,8 @@
 package classes.membros;
 
-public class Funcionario{
-    // Atributos da classe
-	private String id;
-	private String nome;
-	private String funcao;
-
+public class Funcionario extends Membro{
     //Construtor
-    public Funcionario(String id, String nome, String funcao) {
-        this.id = id;
-        this.nome = nome;
-        this.funcao = funcao;
+    public Funcionario(String nome, int nIdentificacao, String endereco, int contato, String dataRegistro, int numEmprestimos ) {
+        super(nome, nIdentificacao, endereco, contato, dataRegistro, numEmprestimos);
     }
-
-    //Getters para acessar os atributos privados
-    public String getId() {
-    	return id;
-    }
-
-    public String getNome() {
-    	return nome;
-    }
-
-    public String getFuncao() {
-    	return funcao;
-    }
-    
-    public void setFuncao(String novaFuncao) {
-    	funcao = novaFuncao;
-    }
-
 }
