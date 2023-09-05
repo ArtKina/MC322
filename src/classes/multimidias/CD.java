@@ -1,33 +1,21 @@
 package classes.multimidias;
 
-public class CD {
+class CD extends Multimidia{
     // Atributos da classe
-    private String id;
-    private String titulo;
-    private String autor;
-    private String situacao;
+    private String[] listaFaixas; 
+    private int duracaoTotal;
+    private int nCopias;
+    private int nCopiasDisponiveis;
+    private String estadoConservacao;
 
     //Construtor
-    public CD(String id, String titulo, String autor) {
-        this.id = id;
-        this.titulo = titulo;
-        this.autor = autor;
+    public CD(String titulo, String autor, String editora, int anoPublicacao, String genero, String sinopse, String imagem, String[] listaFaixas, int duracaoTotal, int nCopias, int nCopiasDisponiveis, String estadoConservacao) {
+        super(titulo, autor, editora, anoPublicacao, genero, sinopse, imagem);
+        this.listaFaixas = listaFaixas;
+        this.duracaoTotal = duracaoTotal;
+        this.nCopias = nCopias;
+        this.nCopiasDisponiveis = nCopiasDisponiveis;
+        this.estadoConservacao = estadoConservacao;
     }
 
-    //Getters para acessar os atributos privados
-    public String getId() {
-        return id;
-    }
-
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public String getAutor() {
-        return autor;
-    }
-
-    public void setFuncao(String novaFuncao) {
-        autor = novaFuncao;
-    }
 }
