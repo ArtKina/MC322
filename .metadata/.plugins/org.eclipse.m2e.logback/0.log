@@ -767,3 +767,4 @@ org.eclipse.jdt.core.JavaModelException: out/production/lab1/classes/multimidias
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1440)
+2023-09-04 21:16:02,064 [Worker-44: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
