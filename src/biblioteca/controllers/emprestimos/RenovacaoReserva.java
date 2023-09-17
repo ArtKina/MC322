@@ -1,6 +1,6 @@
-package classes.emprestimos;
+package biblioteca.controllers.emprestimos;
 
-import classes.multimidias.Multimidia;
+import biblioteca.controllers.multimidias.Multimidia;
 
 public class RenovacaoReserva {
 	private Multimidia item;

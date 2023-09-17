@@ -1,4 +1,4 @@
-package classes.multimidias;
+package biblioteca.controllers.multimidias;
 
 class CD extends Multimidia{
     // Atributos da classe

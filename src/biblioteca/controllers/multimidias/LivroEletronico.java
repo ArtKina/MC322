@@ -1,4 +1,4 @@
-package classes.multimidias;
+package biblioteca.controllers.multimidias;
 
 public class LivroEletronico extends Multimidia{
     // Atributos da classe

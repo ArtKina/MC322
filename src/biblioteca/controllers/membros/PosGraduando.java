@@ -1,4 +1,4 @@
-package classes.membros;
+package biblioteca.controllers.membros;
 
 import classes.emprestimos.Emprestimo;
 

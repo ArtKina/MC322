@@ -1,4 +1,4 @@
-package classes.membros;
+package biblioteca.controllers.membros;
 
 public class Professor extends Membro{
     //Construtor

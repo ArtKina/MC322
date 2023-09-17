@@ -1,6 +1,7 @@
-package classes.membros;
+package biblioteca.controllers.membros;
 
-import classes.emprestimos.Emprestimo;
+import biblioteca.controllers.emprestimos.Emprestimo;
+import biblioteca.controllers.membros.Funcionario;
 
 public class Membro {
     private String nome;

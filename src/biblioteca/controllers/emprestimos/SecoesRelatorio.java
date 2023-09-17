@@ -1,4 +1,4 @@
-package classes.emprestimos.relatorio;
+package biblioteca.controllers.emprestimos;
 
 public class SecoesRelatorio {
     private String titulo;

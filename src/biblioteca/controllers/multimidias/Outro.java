@@ -1,4 +1,4 @@
-package classes.multimidias;
+package biblioteca.controllers.multimidias;
 
 public class Outro extends Multimidia{
 	private String tipo;

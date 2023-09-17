@@ -1,7 +1,7 @@
-package classes.emprestimos;
+package biblioteca.controllers.emprestimos;
 
-import classes.membros.Membro;
-import classes.multimidias.Multimidia;
+import biblioteca.controllers.membros.Membro;
+import biblioteca.controllers.multimidias.Multimidia;
 
 public class Emprestimo {
     // Atributos da classe
