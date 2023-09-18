@@ -1,11 +1,28 @@
-package main;
+
 import biblioteca.controllers.emprestimos.*;
 import biblioteca.controllers.membros.*;
 import biblioteca.controllers.multimidias.*;
+
+import java.util.ArrayList;
+
 import biblioteca.controllers.*;
+import biblioteca.controllers.membros.*;
+import java.util.List;
 
 public class main {
     public static void main(String[] args) {
+        List<Membro> membros = new ArrayList<>();
+        Biblioteca biblioteca = new Biblioteca(membros);
+
+        Membro Kina = new Membro("Arthur Kina", 1, "Jundiai", 994221485,"17/09/2023", 10);
+        Membro George = new Membro("George Sá", 2, "Jundiai", 994221485,"17/09/2023", 10);
+        Membro Arthur = new Membro("Arthur Kina", 1, "Jundiai", 994221485,"17/09/2023", 10);
+
+        biblioteca.addMembro(Kina);
+        biblioteca.addMembro(George);
+        biblioteca.addMembro(Arthur);
+        biblioteca.removeMembro(Arthur);
+
         LivroFisico livro = new LivroFisico("Dom Quixote", "Miguel De Cervantes", "Francisco de Robles", 1605, "Aventura", "A história relata os feitos de um ingênuo e fidalgo cavaleiro medieval", null, "9788408061052", 1, 3, 1, "1a estante", "baixa");
         String titulo = livro.getTitulo();
         System.out.println(titulo);
