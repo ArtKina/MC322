@@ -1,10 +1,17 @@
 package biblioteca.controllers;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import biblioteca.controllers.membros.Membro;
+
 public class EventosBiblioteca {
     private static String nomeEvento;
+    private List<Membro> participantes;
 
     public EventosBiblioteca(String nomeEvento) {
         this.nomeEvento = nomeEvento;
+        this.participantes = new ArrayList<>();
     }
 
     public static String getNomeEvento() {
