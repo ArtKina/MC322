@@ -1068,3 +1068,14 @@ Java Model Exception: Error in Java Model (code 1006): out/production/lab1/class
 !MESSAGE Save operation warnings.
 !SUBENTRY 1 org.eclipse.core.resources 2 234 2023-08-28 21:49:39.454
 !MESSAGE The project description file (.project) for 'lab1' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+
+!ENTRY org.eclipse.ui.ide 4 4 2023-09-11 22:51:45.047
+!MESSAGE Problems saving workspace
+
+!ENTRY org.eclipse.ui.ide 2 1 2023-09-11 22:51:45.047
+!MESSAGE Problems occurred while trying to save the state of the workbench.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2023-09-11 22:51:45.048
+!MESSAGE The project description file (.project) for 'MC322-Biblioteca' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+
+!ENTRY org.eclipse.core.resources 2 10035 2023-09-11 22:51:45.784
+!MESSAGE The workspace will exit with unsaved changes in this session.
