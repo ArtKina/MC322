@@ -10,17 +10,17 @@ public class ListaEmprestimos<T> {
     private String dataEmprestimo;
     private String dataDevolucao;
 
-    //Construtor
+    // Construtor
     public ListaEmprestimos(T membro, String dataEmprestimo, String dataDevolucao) {
-    	listaItens = new Multimidia[1];
+        listaItens = new Multimidia[1];
         this.membro = membro;
         this.dataEmprestimo = dataEmprestimo;
         this.dataDevolucao = dataDevolucao;
     }
 
-    //Getters e setters para acessar os atributos privados
+    // Getters e setters para acessar os atributos privados
     public Multimidia[] getlistaItens() {
-    	return listaItens;
+        return listaItens;
     }
 
     public String getDataEmprestimo() {
@@ -30,7 +30,6 @@ public class ListaEmprestimos<T> {
     public String getDataDevolucao() {
         return dataDevolucao;
     }
-    
 
     public void setDataEmprestimo(String novaDataEmprestimo) {
         dataEmprestimo = novaDataEmprestimo;
@@ -39,12 +38,65 @@ public class ListaEmprestimos<T> {
     public void setDataDevolucao(String novaDataDevolucao) {
         dataDevolucao = novaDataDevolucao;
     }
-    
-    //Métodos
+
+    // Métodos
     public void addItemEmprestado(Multimidia item) {
-		listaItens[numItens] = item;
-		numItens++;
+        listaItens[numItens] = item;
+        numItens++;
     }
 
-    //Add mais métodos
+    public class LimiteEmprestimoExcedidoException extends Exception {
+        public LimiteEmprestimoExcedidoException(String mensagem) {
+            super(mensagem);
+        }
+    }
+
+    public class ItemNaoDisponivelException extends Exception {
+        public ItemNaoDisponivelException(String mensagem) {
+            super(mensagem);
+        }
+    }
+
+    public class MembroComMultasException extends Exception {
+        public MembroComMultasException(String mensagem) {
+            super(mensagem);
+        }
+    }
+
+    try
+
+    {
+        // Verifica se o membro atingiu o limite de empréstimo
+        if (listaItens.size() >= limiteEmprestimo) {
+            throw new LimiteEmprestimoExcedidoException("Limite de empréstimo excedido.");
+        }
+
+        // Verifica se o item está disponível para empréstimo
+        if (!item.isDisponivel()) {
+            throw new ItemNaoDisponivelException("O item não está disponível para empréstimo.");
+        }
+
+        // Verifica se o membro tem multas pendentes
+        if (membro.temMultasPendentes()) {
+            throw new MembroComMultasException("Membro com multas pendentes não pode realizar empréstimos.");
+        }
+
+        // Realiza o empréstimo
+        listaItens.add(item);
+    }catch(LimiteEmprestimoExcedidoException|ItemNaoDisponivelException|
+    MembroComMultasException e)
+    {
+        // Exceções personalizadas foram capturadas, forneça uma mensagem informativa ao
+        // usuário
+        System.out.println("Erro: " + e.getMessage());
+        // Aqui você pode tomar medidas adicionais, como permitir ao usuário corrigir a
+        // ação
+    }catch(
+    Exception e)
+    {
+        // Outras exceções não esperadas podem ser tratadas aqui
+        System.out.println("Erro inesperado: " + e.getMessage());
+        // Considere lançar a exceção para um nível superior no sistema, se necessário
+    }
+
 }
