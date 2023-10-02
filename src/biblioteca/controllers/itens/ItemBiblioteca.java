@@ -1,4 +1,4 @@
-package biblioteca.controllers;
+package biblioteca.controllers.itens;
 
 public class ItemBiblioteca<T> {
     private T item;
@@ -7,7 +7,7 @@ public class ItemBiblioteca<T> {
     private String status;
 
     //Construtor
-    public Item(T item, String titulo, int id, String status){
+    public ItemBiblioteca(T item, String titulo, int id, String status){
         this.item = item;
         this.titulo = titulo;
         this.id = id;
