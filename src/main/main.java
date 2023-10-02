@@ -13,7 +13,7 @@ import java.util.List;
 public class main {
     public static void main(String[] args) {
         List<Membro> membros = new ArrayList<>();
-        Biblioteca biblioteca = new Biblioteca(membros);
+        Biblioteca biblioteca = new Biblioteca(membros, null, null, null, null, null, null);
 
         Membro Kina = new Membro("Arthur Kina", 1, "Jundiai", 994221485,"17/09/2023", 10);
         Membro George = new Membro("George Sá", 2, "Jundiai", 994221485,"17/09/2023", 10);

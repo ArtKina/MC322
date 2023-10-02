@@ -3,9 +3,12 @@ package biblioteca.controllers.emprestimos;
 import biblioteca.controllers.membros.Membro;
 import biblioteca.controllers.itens.multimidias.Multimidia;
 
+import java.util.List;
+import java.util.ArrayList;
+
 public class Emprestimo {
     // Atributos da classe
-    private Multimidia[] itensEmprestados;
+    private List<Multimidia> itensEmprestados;
     private String dataEmprestimo;
     private String dataDevolucao;
     private int diasEmprestado;
@@ -14,8 +17,8 @@ public class Emprestimo {
     private int numItens;
 
     //Construtor
-    public Emprestimo(String dataEmprestimo, String dataDevolucao, int diasEmprestado, int diasAtraso, Membro emprestador) {
-    	itensEmprestados = new Multimidia[1];
+    public Emprestimo(List<Multimidia> itensEmprestados, String dataEmprestimo, String dataDevolucao, int diasEmprestado, int diasAtraso, Membro emprestador) {
+    	this.itensEmprestados = itensEmprestados;
         this.dataEmprestimo = dataEmprestimo;
         this.dataDevolucao = dataDevolucao;
         this.diasEmprestado = diasEmprestado;
@@ -23,8 +26,14 @@ public class Emprestimo {
         this.emprestador = emprestador;
     }
 
+    public class ExcecaoItemNaoDisponivel extends Exception { 
+        public ExcecaoItemNaoDisponivel(String errorMessage) {
+            super(errorMessage);
+        }
+    }
+
     //Getters e setters para acessar os atributos privados
-    public Multimidia[] getitensEmprestados() {
+    public List<Multimidia> getitensEmprestados() {
     	return itensEmprestados;
     }
 
@@ -73,8 +82,12 @@ public class Emprestimo {
     }
     
     //Métodos
-    public void addItemEmprestado(Multimidia item) {
-		itensEmprestados[numItens] = item;
-		numItens++;
+    public void addItemEmprestado(Multimidia item) throws
+    ExcecaoItemNaoDisponivel {
+        if (itensEmprestados.contains(item)) {
+            throw new ExcecaoItemNaoDisponivel("Item não Disponível!");
+        }
+        itensEmprestados.add(item);
+        System.out.println("item adicionado!");
     }
 }

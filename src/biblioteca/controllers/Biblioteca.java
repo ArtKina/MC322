@@ -13,6 +13,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
 
+import java.lang.Exception;
 
 public class Biblioteca {
   private List<Membro> membros;
@@ -23,15 +24,14 @@ public class Biblioteca {
   private List<EventosBiblioteca> eventos;
   private Map<String, Set<Membro>> participantesPorEvento;
 
-
-  public Biblioteca(List<Membro> membros) {
+  public Biblioteca(List<Membro> membros, Map<Integer, Multimidia> itens, Set<Emprestimo> emprestimos, List<ReservaSala> reservas, Set<Categoria> categorias, List<EventosBiblioteca> eventos, Map<String, Set<Membro>> participantesPorEvento) {
     this.membros = membros;
-    this.itens = new HashMap<>();
-    this.emprestimos = new HashSet<>();
-    this.reservas = new ArrayList<>();
-    this.categorias = new HashSet<>();
-    this.eventos = new ArrayList<>();
-    this.participantesPorEvento = new HashMap<>();
+    this.itens = itens;
+    this.emprestimos = emprestimos;
+    this.reservas = reservas;
+    this.categorias = categorias;
+    this.eventos = eventos;
+    this.participantesPorEvento = participantesPorEvento;
   }
 
   //Métodos - Membros
@@ -131,7 +131,5 @@ public void removerParticipante(String nomeEvento, Membro membro) {
       System.out.println("Evento '" + nomeEvento + "' não encontrado.");
   }
 }
-
-
 
 }

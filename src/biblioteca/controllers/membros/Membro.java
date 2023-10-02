@@ -13,19 +13,26 @@ public class Membro {
     private String dataRegistro;
     private Emprestimo[] emprestimos;
     private int numEmprestimos;
+    private int maxEmprestimos;
     private List<Emprestimo> historicoEmprestimos;
 
     // Construtor
-    public Membro(String nome, int nIdentificacao, String endereco, int contato, String dataRegistro,
-            int maxEmprestimos) {
+    public Membro(String nome, int nIdentificacao, String endereco, int contato, String dataRegistro, int maxEmprestimos) {
         this.nome = nome;
         this.nIdentificacao = nIdentificacao;
         this.endereco = endereco;
         this.contato = contato;
         this.dataRegistro = dataRegistro;
-        emprestimos = new Emprestimo[maxEmprestimos];
+        this.maxEmprestimos = maxEmprestimos;
+        this.emprestimos = new Emprestimo[maxEmprestimos];
         numEmprestimos = 0;
         this.historicoEmprestimos = new ArrayList<>();
+    }
+
+    public class ExcecaoLimiteEmprestimoExcedido extends Exception { 
+        public ExcecaoLimiteEmprestimoExcedido(String errorMessage) {
+            super(errorMessage);
+        }
     }
 
     // Getters para acessar os atributos privados
@@ -37,13 +44,18 @@ public class Membro {
         return nome;
     }
 
-    public void addEmprestimo(Emprestimo emprestimo) {
-        if (numEmprestimos < emprestimos.length) {
-            emprestimos[numEmprestimos] = emprestimo;
-            numEmprestimos++;
-        } else {
-            System.out.println("Você atingiu o número máximo de empréstimos");
+    public Integer getMax() {
+        return maxEmprestimos;
+    }
+
+    public void addEmprestimo(Emprestimo emprestimo) throws
+    ExcecaoLimiteEmprestimoExcedido {
+        if (numEmprestimos > maxEmprestimos) {
+            throw new ExcecaoLimiteEmprestimoExcedido("Limite máximo de itens emprestado excedido!");
         }
+        emprestimos[numEmprestimos] = emprestimo;
+        numEmprestimos++;
+        System.out.println("item adicionado!");
     }
 
     // Método de histórico
