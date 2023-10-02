@@ -1,4 +1,4 @@
-package biblioteca.controllers.multimidias;
+package biblioteca.controllers.itens.multimidias;
 
 public class LivroFisico extends Multimidia{
     // Atributos da classe
@@ -11,8 +11,8 @@ public class LivroFisico extends Multimidia{
 
 
     //Construtor
-    public LivroFisico(String titulo, String autor, String editora, int anoPublicacao, String genero, String sinopse, String imagem, String isbn, int edicao, int nCopias, int nCopiasDisponiveis, String localizacao, String estadoConservacao) {
-        super(titulo, autor, editora, anoPublicacao, genero, sinopse, imagem);
+    public LivroFisico(String titulo, String autor, String editora, int anoPublicacao, String genero, String sinopse, String imagem, int id, String isbn, int edicao, int nCopias, int nCopiasDisponiveis, String localizacao, String estadoConservacao) {
+        super(titulo, autor, editora, anoPublicacao, genero, sinopse, imagem, id);
         this.isbn = isbn;
         this.edicao = edicao;
         this.nCopias = nCopias;

@@ -1,4 +1,4 @@
-package biblioteca.controllers;
+package biblioteca.controllers.itens;
 
 public class Equipamentos {
     private static String nomeEquipamentos;

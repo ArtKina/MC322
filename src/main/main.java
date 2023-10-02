@@ -1,7 +1,8 @@
 
 import biblioteca.controllers.emprestimos.*;
 import biblioteca.controllers.membros.*;
-import biblioteca.controllers.multimidias.*;
+import biblioteca.controllers.itens.*;
+import biblioteca.controllers.itens.multimidias.*;
 
 import java.util.ArrayList;
 
@@ -23,7 +24,7 @@ public class main {
         biblioteca.addMembro(Arthur);
         biblioteca.removeMembro(Arthur);
 
-        LivroFisico livro = new LivroFisico("Dom Quixote", "Miguel De Cervantes", "Francisco de Robles", 1605, "Aventura", "A história relata os feitos de um ingênuo e fidalgo cavaleiro medieval", null, "9788408061052", 1, 3, 1, "1a estante", "baixa");
+        LivroFisico livro = new LivroFisico("Dom Quixote", "Miguel De Cervantes", "Francisco de Robles", 1605, "Aventura", "A história relata os feitos de um ingênuo e fidalgo cavaleiro medieval", null, 1234, "9788408061052", 1, 3, 1, "1a estante", "baixa");
         String titulo = livro.getTitulo();
         System.out.println(titulo);
 

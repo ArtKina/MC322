@@ -1,4 +1,4 @@
-package biblioteca.controllers.multimidias;
+package biblioteca.controllers.itens.multimidias;
 
 public class DVD extends Multimidia{
     // Atributos da classe
@@ -11,8 +11,8 @@ public class DVD extends Multimidia{
     private String estadoConservacao;
 
     //Construtor
-    public DVD(String titulo, String autor, String editora, int anoPublicacao, String genero, String sinopse, String imagem, String[] listaFaixas, int durcaoTotal, int nCopias, int nCopiasDisponiveis, String audio, String legendas, String estadoConservacao) {
-        super(titulo, autor, editora, anoPublicacao, genero, sinopse, imagem);
+    public DVD(String titulo, String autor, String editora, int anoPublicacao, String genero, String sinopse, String imagem, int id, String[] listaFaixas, int durcaoTotal, int nCopias, int nCopiasDisponiveis, String audio, String legendas, String estadoConservacao) {
+        super(titulo, autor, editora, anoPublicacao, genero, sinopse, imagem, id);
         this.listaFaixas = listaFaixas;
         this.duracaoTotal = durcaoTotal;
         this.nCopias = nCopias;

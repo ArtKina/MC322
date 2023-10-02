@@ -1,4 +1,4 @@
-package biblioteca.controllers.multimidias;
+package biblioteca.controllers.itens.multimidias;
 
 public class LivroEletronico extends Multimidia{
     // Atributos da classe
@@ -9,8 +9,8 @@ public class LivroEletronico extends Multimidia{
     private String dataDisponibilidade;
 
     //Construtor
-    public LivroEletronico(String titulo, String autor, String editora, int anoPublicacao, String genero, String sinopse, String imagem, String formato, int nLicencas,String url, String requisitos, String dataDisponibilidade) {
-        super(titulo, autor, editora, anoPublicacao, genero, sinopse, imagem);
+    public LivroEletronico(String titulo, String autor, String editora, int anoPublicacao, String genero, String sinopse, String imagem,int id, String formato, int nLicencas,String url, String requisitos, String dataDisponibilidade) {
+        super(titulo, autor, editora, anoPublicacao, genero, sinopse, imagem, id);
         this.formato = formato;
         this.nLicencas = nLicencas;
         this.url = url;

@@ -30,8 +30,8 @@ public class Multimidia {
     public String getTitulo() {
         return titulo;
     }
-    public String getId() {
-        return titulo;
+    public Integer getId() {
+        return id;
     }
     
     public String getAutor() {
