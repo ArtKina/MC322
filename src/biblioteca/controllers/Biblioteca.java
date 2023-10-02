@@ -2,7 +2,8 @@ package biblioteca.controllers;
 
 import biblioteca.controllers.membros.*;
 import biblioteca.controllers.emprestimos.*;
-import biblioteca.controllers.Item;
+import biblioteca.controllers.itens.ItemBiblioteca;
+import biblioteca.controllers.itens.multimidias.*;
 import biblioteca.controllers.EventosBiblioteca;
 
 import java.util.List;
@@ -15,7 +16,7 @@ import java.util.Set;
 
 public class Biblioteca {
   private List<Membro> membros;
-  private Map<Integer, Item> itens;
+  private Map<Integer, Multimidia> itens;
   private Set<Emprestimo> emprestimos;
   private List<ReservaSala> reservas;
   private Set<Categoria> categorias;
@@ -45,15 +46,15 @@ public class Biblioteca {
   }
 
   //Métodos - Itens
-  public void addItem(Item item) {
+  public void addItem(Multimidia item) {
     itens.put(item.getId(), item);
     System.out.println("Item com ID " + item.getId() + " foi adicionado à biblioteca");
 }
 
 public void removeItem(int itemId) {
     if (itens.containsKey(itemId)) {
-        Item item = itens.get(itemId);
-        itens.remove(itemId);
+      Multimidia item = itens.get(itemId);
+        itens.remove(itemId, item);
         System.out.println("Item com ID " + itemId + " foi removido da biblioteca");
     } else {
         System.out.println("Item com ID " + itemId + " não foi encontrado na biblioteca");

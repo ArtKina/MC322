@@ -1,4 +1,7 @@
-package biblioteca.controllers.multimidias;
+package biblioteca.controllers.itens.multimidias;
+
+import biblioteca.controllers.*;
+import java.util.List;
 
 public class Multimidia {
 	private String titulo;
@@ -8,9 +11,11 @@ public class Multimidia {
 	private String genero;
 	private String sinopse;
 	private String imagem;
+	private int id;
+	private List<Comentario> membros;
 	
 	//Construtor
-	public Multimidia(String titulo, String autor, String editora, int anoPublicacao, String genero, String sinopse, String imagem) {
+	public Multimidia(String titulo, String autor, String editora, int anoPublicacao, String genero, String sinopse, String imagem, int id) {
 		this.titulo = titulo;
 		this.autor = autor;
 		this.editora = editora;
@@ -18,10 +23,14 @@ public class Multimidia {
 		this.genero = genero;
 		this.sinopse = sinopse;
 		this.imagem = imagem;
+		this.id = id;
 	}
 	
     //Getters e Setters para acessar os atributos privados
     public String getTitulo() {
+        return titulo;
+    }
+    public String getId() {
         return titulo;
     }
     

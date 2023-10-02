@@ -1,11 +1,13 @@
 package biblioteca.controllers;
 
 public class Comentario {
-    private int id;
+    private int membroId;
+    private int itemId;
     private String texto;
 
-    public Comentario(int id, String texto) {
-        this.id = id;
+    public Comentario(int membroId, int ItemId, String texto) {
+        this.membroId = membroId;
+        this.membroId = itemId;
         this.texto = texto;
     }
 }
