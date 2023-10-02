@@ -66,17 +66,17 @@ public class ListaEmprestimos<T> {
     try
 
     {
-        // Verifica se o membro atingiu o limite de empréstimo
+        // Limite de empréstimo
         if (listaItens.size() >= limiteEmprestimo) {
             throw new LimiteEmprestimoExcedidoException("Limite de empréstimo excedido.");
         }
 
-        // Verifica se o item está disponível para empréstimo
+        // Disponibilidade para empréstimo
         if (!item.isDisponivel()) {
             throw new ItemNaoDisponivelException("O item não está disponível para empréstimo.");
         }
 
-        // Verifica se o membro tem multas pendentes
+        // Multas pendentes
         if (membro.temMultasPendentes()) {
             throw new MembroComMultasException("Membro com multas pendentes não pode realizar empréstimos.");
         }
