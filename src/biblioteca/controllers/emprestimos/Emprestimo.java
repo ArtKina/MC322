@@ -16,9 +16,10 @@ public class Emprestimo {
     private Membro emprestador;
     private int numItens;
 
-    //Construtor
-    public Emprestimo(List<Multimidia> itensEmprestados, String dataEmprestimo, String dataDevolucao, int diasEmprestado, int diasAtraso, Membro emprestador) {
-    	this.itensEmprestados = itensEmprestados;
+    // Construtor
+    public Emprestimo(List<Multimidia> itensEmprestados, String dataEmprestimo, String dataDevolucao,
+            int diasEmprestado, int diasAtraso, Membro emprestador) {
+        this.itensEmprestados = itensEmprestados;
         this.dataEmprestimo = dataEmprestimo;
         this.dataDevolucao = dataDevolucao;
         this.diasEmprestado = diasEmprestado;
@@ -26,15 +27,15 @@ public class Emprestimo {
         this.emprestador = emprestador;
     }
 
-    public class ExcecaoItemNaoDisponivel extends Exception { 
+    public class ExcecaoItemNaoDisponivel extends Exception {
         public ExcecaoItemNaoDisponivel(String errorMessage) {
             super(errorMessage);
         }
     }
 
-    //Getters e setters para acessar os atributos privados
+    // Getters e setters para acessar os atributos privados
     public List<Multimidia> getitensEmprestados() {
-    	return itensEmprestados;
+        return itensEmprestados;
     }
 
     public String getDataEmprestimo() {
@@ -56,9 +57,9 @@ public class Emprestimo {
     public Membro getEmprestador() {
         return emprestador;
     }
-    
+
     public int getNumItens() {
-    	return numItens;
+        return numItens;
     }
 
     public void setDataEmprestimo(String novaDataEmprestimo) {
@@ -73,17 +74,16 @@ public class Emprestimo {
         diasEmprestado = novoDiasEmprestado;
     }
 
-    public void setDiasAtrasado(int novoDiasAtraso) {
+    public void setDiasAtraso(int novoDiasAtraso) {
         diasAtraso = novoDiasAtraso;
     }
 
     public void setNovoEmprestador(Membro novoEmprestador) {
         emprestador = novoEmprestador;
     }
-    
-    //Métodos
-    public void addItemEmprestado(Multimidia item) throws
-    ExcecaoItemNaoDisponivel {
+
+    // Métodos
+    public void addItemEmprestado(Multimidia item) throws ExcecaoItemNaoDisponivel {
         if (itensEmprestados.contains(item)) {
             throw new ExcecaoItemNaoDisponivel("Item não Disponível!");
         }
