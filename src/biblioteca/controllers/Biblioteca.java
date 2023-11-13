@@ -62,8 +62,8 @@ public void removeItem(int itemId) {
 }
 
 //Métodos - Empréstimo
-public void realizarEmprestimo(String dataEmprestimo, String dataDevolucao, int diasEmprestado, int diasAtraso, Membro membro) {
-  Emprestimo emprestimo = new Emprestimo(dataEmprestimo, dataDevolucao, diasEmprestado, diasAtraso, membro);
+public void realizarEmprestimo(List<Multimidia> itensEmprestados,String dataEmprestimo, String dataDevolucao, int diasEmprestado, int diasAtraso, Membro membro) {
+  Emprestimo emprestimo = new Emprestimo(itensEmprestados, dataEmprestimo, dataDevolucao, diasEmprestado, diasAtraso, membro);
   
   if (emprestimos.contains(emprestimo)) {
       System.out.println("Este item já foi emprestado e não pode ser emprestado novamente neste momento.");
@@ -73,8 +73,8 @@ public void realizarEmprestimo(String dataEmprestimo, String dataDevolucao, int 
   }
 }
 
-public void realizarDevolucao(String dataEmprestimo, String dataDevolucao, int diasEmprestado, int diasAtraso, Membro membro) {
-  Emprestimo emprestimo = new Emprestimo(dataEmprestimo, dataDevolucao, diasEmprestado, diasAtraso, membro);
+public void realizarDevolucao(List<Multimidia> itensEmprestados, String dataEmprestimo, String dataDevolucao, int diasEmprestado, int diasAtraso, Membro membro) {
+  Emprestimo emprestimo = new Emprestimo(itensEmprestados, dataEmprestimo, dataDevolucao, diasEmprestado, diasAtraso, membro);
   
   if (emprestimos.contains(emprestimo)) {
       emprestimos.remove(emprestimo);

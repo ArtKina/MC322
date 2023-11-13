@@ -4,6 +4,8 @@ import biblioteca.controllers.*;
 import java.util.List;
 
 public class Multimidia {
+	private static Multimidia instanciaUnica; // Campo para armazenar a única instância
+
 	private String titulo;
 	private String autor;
 	private String editora;
@@ -13,17 +15,25 @@ public class Multimidia {
 	private String imagem;
 	private int id;
 	private List<Comentario> membros;
-	
-	//Construtor
-	public Multimidia(String titulo, String autor, String editora, int anoPublicacao, String genero, String sinopse, String imagem, int id) {
-		this.titulo = titulo;
-		this.autor = autor;
-		this.editora = editora;
-		this.anoPublicacao = anoPublicacao; 
-		this.genero = genero;
-		this.sinopse = sinopse;
-		this.imagem = imagem;
-		this.id = id;
+
+	// Construtor privado para evitar a criação de instâncias fora da classe
+	protected Multimidia(String titulo, String autor, String editora, int anoPublicacao, String genero, String sinopse, String imagem, int id) {
+			this.titulo = titulo;
+			this.autor = autor;
+			this.editora = editora;
+			this.anoPublicacao = anoPublicacao;
+			this.genero = genero;
+			this.sinopse = sinopse;
+			this.imagem = imagem;
+			this.id = id;
+	}
+
+	// Método estático para obter a instância única
+	public static Multimidia getInstance(String titulo, String autor, String editora, int anoPublicacao, String genero, String sinopse, String imagem, int id) {
+			if (instanciaUnica == null) {
+					instanciaUnica = new Multimidia(titulo, autor, editora, anoPublicacao, genero, sinopse, imagem, id);
+			}
+			return instanciaUnica;
 	}
 	
     //Getters e Setters para acessar os atributos privados

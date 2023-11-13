@@ -28,11 +28,15 @@ public class main {
         Emprestimo emprestimo = new Emprestimo(itensEmprestados, "2023-10-01", "2023-10-15", 15, 0, Kina);
 
         // Criando itens de multimídia
-        Multimidia item1 = new Multimidia("Dom Quixote", "Miguel de Cervantes", "Moderna", 2023, "Ficção", "Texto",
-                "Imagem", 123);
-        Multimidia item2 = new Multimidia("Revolução dos bichos", "George Owell", "Moderna", 2023, "Ficção", "Texto",
-                "Imagem", 1234);
+        Multimidia item1 = Multimidia.getInstance("Dom Quixote", "Miguel de Cervantes", "Moderna", 2023, "Ficção", "Texto",
+        "Imagem", 123);
+        Multimidia item2 = Multimidia.getInstance("Revolução dos bichos", "George Owell", "Moderna", 2023, "Ficção", "Texto",
+        "Imagem", 1234);
 
+        //Como só pode criar uma instância os dois itens devem ser iguais
+        System.out.println(item1.getTitulo());
+        System.out.println(item2.getTitulo());
+        
         try {
             // Tentando adicionar o mesmo item duas vezes (deve lançar uma exceção)
             emprestimo.addItemEmprestado(item1);
