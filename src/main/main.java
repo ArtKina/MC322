@@ -1,7 +1,7 @@
 package main;
 
 import biblioteca.controllers.emprestimos.Emprestimo;
-import biblioteca.controllers.membros.Membro;
+import biblioteca.controllers.membros.*;
 import biblioteca.controllers.itens.multimidias.*;
 
 import java.util.ArrayList;
@@ -36,7 +36,21 @@ public class main {
         //Como só pode criar uma instância os dois itens devem ser iguais
         System.out.println(item1.getTitulo());
         System.out.println(item2.getTitulo());
-        
+
+        // Criar uma instância do Subject
+        Subject subject = new Subject();
+
+        // Criar instâncias de CObserver
+        CObserver observer1 = new CObserver("Arthur");
+        CObserver observer2 = new CObserver("George");
+
+        // Registrar os observadores no subject
+        subject.registraObserver(observer1);
+        subject.registraObserver(observer2);
+
+        // Notificar os observadores
+        subject.notificaObservers();
+
         try {
             // Tentando adicionar o mesmo item duas vezes (deve lançar uma exceção)
             emprestimo.addItemEmprestado(item1);
