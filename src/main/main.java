@@ -9,6 +9,8 @@ import java.util.ArrayList;
 import biblioteca.controllers.*;
 import java.util.List;
 
+import javax.security.auth.Subject;
+
 public class main {
     public static void main(String[] args) {
         List<Membro> membros = new ArrayList<>();
@@ -27,13 +29,21 @@ public class main {
         List<Multimidia> itensEmprestados = new ArrayList<>();
         Emprestimo emprestimo = new Emprestimo(itensEmprestados, "2023-10-01", "2023-10-15", 15, 0, Kina);
 
-        // Criando itens de multimídia
-        Multimidia item1 = Multimidia.getInstance("Dom Quixote", "Miguel de Cervantes", "Moderna", 2023, "Ficção", "Texto",
-        "Imagem", 123);
-        Multimidia item2 = Multimidia.getInstance("Revolução dos bichos", "George Owell", "Moderna", 2023, "Ficção", "Texto",
-        "Imagem", 1234);
+        // Criando factories para diferentes tipos de itens multimídia
+        IMultimidiaFactory audioFactory = new AudioFactory();
+        IMultimidiaFactory videoFactory = new VideoFactory();
+        IMultimidiaFactory softwareFactory = new SoftwareFactory();
 
-        //Como só pode criar uma instância os dois itens devem ser iguais
+        // Criando instâncias de itens multimídia usando as factories
+        Multimidia item1 = Multimidia.criarMultimidia(audioFactory, "Dom Quixote", "Miguel de Cervantes", "Moderna",
+                2023, "Ficção", "Texto",
+                "Imagem", 123);
+
+        Multimidia item2 = Multimidia.criarMultimidia(videoFactory, "Revolução dos bichos", "George Owell", "Moderna",
+                2023, "Ficção", "Texto",
+                "Imagem", 1234);
+
+        // Como só pode criar uma instância os dois itens devem ser iguais
         System.out.println(item1.getTitulo());
         System.out.println(item2.getTitulo());
 
