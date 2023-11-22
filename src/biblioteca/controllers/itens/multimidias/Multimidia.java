@@ -85,10 +85,6 @@ public class Multimidia {
 		}
 	}
 
-	// Método
-	public void determinarEmprestimo() {
-		System.out.println("O item multimídia foi emprestado!");
-	}
 }
 
 // Concrete Creator: Factory para Áudio
